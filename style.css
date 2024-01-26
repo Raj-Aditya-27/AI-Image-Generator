@@ -10,6 +10,7 @@
 .container {
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .inputContainer {
@@ -103,12 +104,95 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 2vw;
 }
 
-.outputContainer img {
-    height: 35vh;
-    width: 35vh;
+#default-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.outputContainer #default-images img {
+    height: 30vh;
+    width: 30vh;
     border-radius: 10px;
+    margin: 1vw; /* Add margin to each image */
+}
+
+
+@media screen and (max-width:700px) {
+
+    /* input-container */
+    .header {
+        width: 90%;
+        height: 40%;
+    }
+
+    .inputAndGenerate {
+        width: 90%;
+    }
+
+    button {
+        width: 25%;
+    }
+
+    .inputContainer {
+        background-position-x: calc(70%);
+    }
+
+    input {
+        padding: 3%;
+    }
+
+    /* output-container */
+    #default-images {
+        margin-top: auto;
+        width: 80%;
+        row-gap: 2vh;
+        margin: auto;
+    }
+
+    .outputContainer #default-images img {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 10px;
+    }
+
+    .outputContainer {
+        padding: 6%;
+    }
+}
+
+@media screen and ((min-width:701px) and (max-width:1300px)) {
+
+    .header {
+        width: 80%;
+    }
+
+    .inputAndGenerate {
+        width: 80%;
+    }
+
+    button {
+        width: 25%;
+    }
+
+    /* output-container */
+    #default-images {
+        margin-top: auto;
+        width: 80%;
+        row-gap: 2vh;
+    }
+
+    .outputContainer #default-images img {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 10px;
+    }
+
+    .outputContainer {
+        padding: 6%;
+    }
 }
